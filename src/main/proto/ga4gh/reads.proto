@@ -32,6 +32,9 @@ message ReadGroup {
 
   // The ID of the dataset this read group belongs to.
   string dataset_id = 2;
+  
+  // The ID of the read group set this read group belongs to.
+  string read_group_set_id = 15;
 
   // The read group name.
   string name = 3;
@@ -64,6 +67,7 @@ message ReadGroup {
   // Statistical data on reads in this read group.
   ReadStats stats = 11;
 
+  // Program can be used to track the provenance of how read data was generated.
   repeated Program programs = 12;
 
   // The ID of the reference set to which the reads in this read group are
@@ -76,6 +80,8 @@ message ReadGroup {
 
 // A ReadGroupSet is a logical collection of ReadGroups. Typically one
 // ReadGroupSet represents all the reads from one experimental sample.
+// All read groups require that all readgroups in the set are mapped to
+// the same referenceSet.
 message ReadGroupSet {
   // The read group set ID.
   string id = 1;
@@ -88,12 +94,9 @@ message ReadGroupSet {
 
   // Statistical data on reads in this read group set.
   ReadStats stats = 4;
-
-  // The read groups in this set.
-  repeated ReadGroup read_groups = 5;
-
-  // NB: we require that all readgroups in the set are mapped to the same
-  // referenceSet.
+  
+  // IDs of the Read Groups in this ReadGroupSet
+  repeated string read_group_ids = 6;
 }
 
 // A linear alignment describes the alignment of a read to a Reference, using a
@@ -110,8 +113,7 @@ message LinearAlignment {
   int32 mapping_quality = 2;
 
   // Represents the local alignment of this sequence (alignment matches, indels,
-  // etc)
-  // versus the reference.
+  // etc) versus the reference.
   repeated CigarUnit cigar = 3;
 }
 
