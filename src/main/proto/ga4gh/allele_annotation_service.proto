@@ -4,6 +4,7 @@ package ga4gh;
 
 import "ga4gh/allele_annotations.proto";
 import "ga4gh/metadata.proto";
+import "ga4gh/common.proto";
 import "google/api/annotations.proto";
 
 service AlleleAnnotationService {
@@ -105,6 +106,15 @@ message SearchVariantAnnotationsRequest {
   // annotations.
   repeated OntologyTerm effects = 6;
 
+
+  // Filters results using the provided external identifier. Only returns
+  // results that strictly match the provided fields of the external identifier.
+  // Returns any items with an external identifier that matches all of
+  // the provided fields. For example, searching with only the `database`
+  // set to `dbsnp` will filter results for those that include external
+  // identifiers with a `database` field strictly matching the request.
+  ExternalIdentifier external_identifier = 9;
+
   // Specifies the maximum number of results to return in a single page. If
   // unspecified, a system default will be used.
   int32 page_size = 7;
@@ -133,6 +143,13 @@ message SearchVariantAnnotationsResponse {
 message SearchVariantAnnotationSetsRequest {
   // Required. The `VariantSet` to search.
   string variant_set_id = 1;
+
+  // Filters results using the provided external identifier. Only returns
+  // results that strictly match the provided fields of the identifier.
+  // Returns any items with an external identifier that matches all of
+  // the provided fields. For example, searching without an identifier
+  // will return all messages external identifiers with the provided `db`.
+  ExternalIdentifier external_identifier = 4;
 
   // Specifies the maximum number of results to return in a single page. If
   // unspecified, a system default will be used.
