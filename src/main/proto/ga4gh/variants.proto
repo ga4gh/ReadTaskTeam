@@ -106,6 +106,9 @@ message Call {
   // the ordering of the calls on this `Variant`.
   // The number of results will also be the same.
   string call_set_id = 2;
+  
+  // ID of the variant this call was made against.
+  string variant_id = 7;
 
   // The genotype of this variant call.
   //
@@ -186,9 +189,4 @@ message Variant {
 
   // A map of additional variant information.
   map<string, google.protobuf.ListValue> info = 11;
-
-  // The variant calls for this particular variant. Each one represents the
-  // determination of genotype with respect to this variant. `Call`s in this
-  // array are implicitly associated with this `Variant`.
-  repeated Call calls = 12;
 }
