@@ -57,6 +57,16 @@ message ExternalIdentifier {
   string version = 3;
 }
 
+message Metadata {
+  // The :ref:`ISO 8601<metadata_date_time>` time at which the data was
+  // created.
+  string created = 1;
+
+  // The :ref:`ISO 8601<metadata_date_time>` time at which the data was
+  // updated.
+  string updated = 2;
+}
+
 // An experimental preparation of a sample.
 message Experiment {
   // The experiment ID

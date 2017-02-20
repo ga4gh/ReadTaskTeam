@@ -21,7 +21,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='ga4gh/schemas/ga4gh/common.proto',
   package='ga4gh.schemas.ga4gh',
   syntax='proto3',
-  serialized_pb=_b('\n ga4gh/schemas/ga4gh/common.proto\x12\x13ga4gh.schemas.ga4gh\x1a\x1cgoogle/protobuf/struct.proto\"2\n\x0bGAException\x12\x12\n\nerror_code\x18\x01 \x01(\x05\x12\x0f\n\x07message\x18\x02 \x01(\t\"a\n\x08Position\x12\x16\n\x0ereference_name\x18\x01 \x01(\t\x12\x10\n\x08position\x18\x02 \x01(\x03\x12+\n\x06strand\x18\x03 \x01(\x0e\x32\x1b.ga4gh.schemas.ga4gh.Strand\"K\n\x12\x45xternalIdentifier\x12\x10\n\x08\x64\x61tabase\x18\x01 \x01(\t\x12\x12\n\nidentifier\x18\x02 \x01(\t\x12\x0f\n\x07version\x18\x03 \x01(\t\"\x86\x03\n\nExperiment\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x03 \x01(\t\x12\x1b\n\x13message_create_time\x18\x04 \x01(\t\x12\x1b\n\x13message_update_time\x18\x05 \x01(\t\x12\x10\n\x08run_time\x18\x06 \x01(\t\x12\x10\n\x08molecule\x18\x07 \x01(\t\x12\x10\n\x08strategy\x18\x08 \x01(\t\x12\x11\n\tselection\x18\t \x01(\t\x12\x0f\n\x07library\x18\n \x01(\t\x12\x16\n\x0elibrary_layout\x18\x0b \x01(\t\x12\x18\n\x10instrument_model\x18\x0c \x01(\t\x12\x1c\n\x14instrument_data_file\x18\r \x01(\t\x12\x19\n\x11sequencing_center\x18\x0e \x01(\t\x12\x15\n\rplatform_unit\x18\x0f \x01(\t\x12\x33\n\nattributes\x18\x11 \x01(\x0b\x32\x1f.ga4gh.schemas.ga4gh.Attributes\"\xb0\x01\n\x08\x41nalysis\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x03 \x01(\t\x12\x0f\n\x07\x63reated\x18\x04 \x01(\t\x12\x0f\n\x07updated\x18\x05 \x01(\t\x12\x0c\n\x04type\x18\x06 \x01(\t\x12\x10\n\x08software\x18\x07 \x03(\t\x12\x33\n\nattributes\x18\t \x01(\x0b\x32\x1f.ga4gh.schemas.ga4gh.Attributes\"-\n\x0cOntologyTerm\x12\x0f\n\x07term_id\x18\x01 \x01(\t\x12\x0c\n\x04term\x18\x02 \x01(\t\"c\n\x07Program\x12\x14\n\x0c\x63ommand_line\x18\x01 \x01(\t\x12\n\n\x02id\x18\x02 \x01(\t\x12\x0c\n\x04name\x18\x03 \x01(\t\x12\x17\n\x0fprev_program_id\x18\x04 \x01(\t\x12\x0f\n\x07version\x18\x05 \x01(\t\"\xdc\x04\n\x0e\x41ttributeValue\x12\x16\n\x0cstring_value\x18\x01 \x01(\tH\x00\x12\x15\n\x0bint64_value\x18\x02 \x01(\x03H\x00\x12\x15\n\x0bint32_value\x18\x03 \x01(\x05H\x00\x12\x14\n\nbool_value\x18\x04 \x01(\x08H\x00\x12\x16\n\x0c\x64ouble_value\x18\x05 \x01(\x01H\x00\x12\x46\n\x13\x65xternal_identifier\x18\x06 \x01(\x0b\x32\'.ga4gh.schemas.ga4gh.ExternalIdentifierH\x00\x12:\n\rontology_term\x18\x07 \x01(\x0b\x32!.ga4gh.schemas.ga4gh.OntologyTermH\x00\x12\x35\n\nexperiment\x18\x08 \x01(\x0b\x32\x1f.ga4gh.schemas.ga4gh.ExperimentH\x00\x12/\n\x07program\x18\t \x01(\x0b\x32\x1c.ga4gh.schemas.ga4gh.ProgramH\x00\x12\x31\n\x08\x61nalysis\x18\n \x01(\x0b\x32\x1d.ga4gh.schemas.ga4gh.AnalysisH\x00\x12\x34\n\nnull_value\x18\x0b \x01(\x0e\x32\x1e.ga4gh.schemas.ga4gh.NullValueH\x00\x12\x35\n\nattributes\x18\x0c \x01(\x0b\x32\x1f.ga4gh.schemas.ga4gh.AttributesH\x00\x12\x41\n\x0e\x61ttribute_list\x18\r \x01(\x0b\x32\'.ga4gh.schemas.ga4gh.AttributeValueListH\x00\x42\x07\n\x05value\"I\n\x12\x41ttributeValueList\x12\x33\n\x06values\x18\x01 \x03(\x0b\x32#.ga4gh.schemas.ga4gh.AttributeValue\"\x9b\x01\n\nAttributes\x12\x37\n\x04\x61ttr\x18\x01 \x03(\x0b\x32).ga4gh.schemas.ga4gh.Attributes.AttrEntry\x1aT\n\tAttrEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\x36\n\x05value\x18\x02 \x01(\x0b\x32\'.ga4gh.schemas.ga4gh.AttributeValueList:\x02\x38\x01*@\n\x06Strand\x12\x16\n\x12STRAND_UNSPECIFIED\x10\x00\x12\x0e\n\nNEG_STRAND\x10\x01\x12\x0e\n\nPOS_STRAND\x10\x02*\x1b\n\tNullValue\x12\x0e\n\nNULL_VALUE\x10\x00\x62\x06proto3')
+  serialized_pb=_b('\n ga4gh/schemas/ga4gh/common.proto\x12\x13ga4gh.schemas.ga4gh\x1a\x1cgoogle/protobuf/struct.proto\"2\n\x0bGAException\x12\x12\n\nerror_code\x18\x01 \x01(\x05\x12\x0f\n\x07message\x18\x02 \x01(\t\"a\n\x08Position\x12\x16\n\x0ereference_name\x18\x01 \x01(\t\x12\x10\n\x08position\x18\x02 \x01(\x03\x12+\n\x06strand\x18\x03 \x01(\x0e\x32\x1b.ga4gh.schemas.ga4gh.Strand\"K\n\x12\x45xternalIdentifier\x12\x10\n\x08\x64\x61tabase\x18\x01 \x01(\t\x12\x12\n\nidentifier\x18\x02 \x01(\t\x12\x0f\n\x07version\x18\x03 \x01(\t\",\n\x08Metadata\x12\x0f\n\x07\x63reated\x18\x01 \x01(\t\x12\x0f\n\x07updated\x18\x02 \x01(\t\"\x86\x03\n\nExperiment\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x03 \x01(\t\x12\x1b\n\x13message_create_time\x18\x04 \x01(\t\x12\x1b\n\x13message_update_time\x18\x05 \x01(\t\x12\x10\n\x08run_time\x18\x06 \x01(\t\x12\x10\n\x08molecule\x18\x07 \x01(\t\x12\x10\n\x08strategy\x18\x08 \x01(\t\x12\x11\n\tselection\x18\t \x01(\t\x12\x0f\n\x07library\x18\n \x01(\t\x12\x16\n\x0elibrary_layout\x18\x0b \x01(\t\x12\x18\n\x10instrument_model\x18\x0c \x01(\t\x12\x1c\n\x14instrument_data_file\x18\r \x01(\t\x12\x19\n\x11sequencing_center\x18\x0e \x01(\t\x12\x15\n\rplatform_unit\x18\x0f \x01(\t\x12\x33\n\nattributes\x18\x11 \x01(\x0b\x32\x1f.ga4gh.schemas.ga4gh.Attributes\"\xb0\x01\n\x08\x41nalysis\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x03 \x01(\t\x12\x0f\n\x07\x63reated\x18\x04 \x01(\t\x12\x0f\n\x07updated\x18\x05 \x01(\t\x12\x0c\n\x04type\x18\x06 \x01(\t\x12\x10\n\x08software\x18\x07 \x03(\t\x12\x33\n\nattributes\x18\t \x01(\x0b\x32\x1f.ga4gh.schemas.ga4gh.Attributes\"-\n\x0cOntologyTerm\x12\x0f\n\x07term_id\x18\x01 \x01(\t\x12\x0c\n\x04term\x18\x02 \x01(\t\"c\n\x07Program\x12\x14\n\x0c\x63ommand_line\x18\x01 \x01(\t\x12\n\n\x02id\x18\x02 \x01(\t\x12\x0c\n\x04name\x18\x03 \x01(\t\x12\x17\n\x0fprev_program_id\x18\x04 \x01(\t\x12\x0f\n\x07version\x18\x05 \x01(\t\"\xdc\x04\n\x0e\x41ttributeValue\x12\x16\n\x0cstring_value\x18\x01 \x01(\tH\x00\x12\x15\n\x0bint64_value\x18\x02 \x01(\x03H\x00\x12\x15\n\x0bint32_value\x18\x03 \x01(\x05H\x00\x12\x14\n\nbool_value\x18\x04 \x01(\x08H\x00\x12\x16\n\x0c\x64ouble_value\x18\x05 \x01(\x01H\x00\x12\x46\n\x13\x65xternal_identifier\x18\x06 \x01(\x0b\x32\'.ga4gh.schemas.ga4gh.ExternalIdentifierH\x00\x12:\n\rontology_term\x18\x07 \x01(\x0b\x32!.ga4gh.schemas.ga4gh.OntologyTermH\x00\x12\x35\n\nexperiment\x18\x08 \x01(\x0b\x32\x1f.ga4gh.schemas.ga4gh.ExperimentH\x00\x12/\n\x07program\x18\t \x01(\x0b\x32\x1c.ga4gh.schemas.ga4gh.ProgramH\x00\x12\x31\n\x08\x61nalysis\x18\n \x01(\x0b\x32\x1d.ga4gh.schemas.ga4gh.AnalysisH\x00\x12\x34\n\nnull_value\x18\x0b \x01(\x0e\x32\x1e.ga4gh.schemas.ga4gh.NullValueH\x00\x12\x35\n\nattributes\x18\x0c \x01(\x0b\x32\x1f.ga4gh.schemas.ga4gh.AttributesH\x00\x12\x41\n\x0e\x61ttribute_list\x18\r \x01(\x0b\x32\'.ga4gh.schemas.ga4gh.AttributeValueListH\x00\x42\x07\n\x05value\"I\n\x12\x41ttributeValueList\x12\x33\n\x06values\x18\x01 \x03(\x0b\x32#.ga4gh.schemas.ga4gh.AttributeValue\"\x9b\x01\n\nAttributes\x12\x37\n\x04\x61ttr\x18\x01 \x03(\x0b\x32).ga4gh.schemas.ga4gh.Attributes.AttrEntry\x1aT\n\tAttrEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\x36\n\x05value\x18\x02 \x01(\x0b\x32\'.ga4gh.schemas.ga4gh.AttributeValueList:\x02\x38\x01*@\n\x06Strand\x12\x16\n\x12STRAND_UNSPECIFIED\x10\x00\x12\x0e\n\nNEG_STRAND\x10\x01\x12\x0e\n\nPOS_STRAND\x10\x02*\x1b\n\tNullValue\x12\x0e\n\nNULL_VALUE\x10\x00\x62\x06proto3')
   ,
   dependencies=[google_dot_protobuf_dot_struct__pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
@@ -47,8 +47,8 @@ _STRAND = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=1875,
-  serialized_end=1939,
+  serialized_start=1921,
+  serialized_end=1985,
 )
 _sym_db.RegisterEnumDescriptor(_STRAND)
 
@@ -66,8 +66,8 @@ _NULLVALUE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=1941,
-  serialized_end=1968,
+  serialized_start=1987,
+  serialized_end=2014,
 )
 _sym_db.RegisterEnumDescriptor(_NULLVALUE)
 
@@ -207,6 +207,44 @@ _EXTERNALIDENTIFIER = _descriptor.Descriptor(
 )
 
 
+_METADATA = _descriptor.Descriptor(
+  name='Metadata',
+  full_name='ga4gh.schemas.ga4gh.Metadata',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='created', full_name='ga4gh.schemas.ga4gh.Metadata.created', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='updated', full_name='ga4gh.schemas.ga4gh.Metadata.updated', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=315,
+  serialized_end=359,
+)
+
+
 _EXPERIMENT = _descriptor.Descriptor(
   name='Experiment',
   full_name='ga4gh.schemas.ga4gh.Experiment',
@@ -338,8 +376,8 @@ _EXPERIMENT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=316,
-  serialized_end=706,
+  serialized_start=362,
+  serialized_end=752,
 )
 
 
@@ -418,8 +456,8 @@ _ANALYSIS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=709,
-  serialized_end=885,
+  serialized_start=755,
+  serialized_end=931,
 )
 
 
@@ -456,8 +494,8 @@ _ONTOLOGYTERM = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=887,
-  serialized_end=932,
+  serialized_start=933,
+  serialized_end=978,
 )
 
 
@@ -515,8 +553,8 @@ _PROGRAM = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=934,
-  serialized_end=1033,
+  serialized_start=980,
+  serialized_end=1079,
 )
 
 
@@ -633,8 +671,8 @@ _ATTRIBUTEVALUE = _descriptor.Descriptor(
       name='value', full_name='ga4gh.schemas.ga4gh.AttributeValue.value',
       index=0, containing_type=None, fields=[]),
   ],
-  serialized_start=1036,
-  serialized_end=1640,
+  serialized_start=1082,
+  serialized_end=1686,
 )
 
 
@@ -664,8 +702,8 @@ _ATTRIBUTEVALUELIST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1642,
-  serialized_end=1715,
+  serialized_start=1688,
+  serialized_end=1761,
 )
 
 
@@ -702,8 +740,8 @@ _ATTRIBUTES_ATTRENTRY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1789,
-  serialized_end=1873,
+  serialized_start=1835,
+  serialized_end=1919,
 )
 
 _ATTRIBUTES = _descriptor.Descriptor(
@@ -732,8 +770,8 @@ _ATTRIBUTES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1718,
-  serialized_end=1873,
+  serialized_start=1764,
+  serialized_end=1919,
 )
 
 _POSITION.fields_by_name['strand'].enum_type = _STRAND
@@ -793,6 +831,7 @@ _ATTRIBUTES.fields_by_name['attr'].message_type = _ATTRIBUTES_ATTRENTRY
 DESCRIPTOR.message_types_by_name['GAException'] = _GAEXCEPTION
 DESCRIPTOR.message_types_by_name['Position'] = _POSITION
 DESCRIPTOR.message_types_by_name['ExternalIdentifier'] = _EXTERNALIDENTIFIER
+DESCRIPTOR.message_types_by_name['Metadata'] = _METADATA
 DESCRIPTOR.message_types_by_name['Experiment'] = _EXPERIMENT
 DESCRIPTOR.message_types_by_name['Analysis'] = _ANALYSIS
 DESCRIPTOR.message_types_by_name['OntologyTerm'] = _ONTOLOGYTERM
@@ -823,6 +862,13 @@ ExternalIdentifier = _reflection.GeneratedProtocolMessageType('ExternalIdentifie
   # @@protoc_insertion_point(class_scope:ga4gh.schemas.ga4gh.ExternalIdentifier)
   ))
 _sym_db.RegisterMessage(ExternalIdentifier)
+
+Metadata = _reflection.GeneratedProtocolMessageType('Metadata', (_message.Message,), dict(
+  DESCRIPTOR = _METADATA,
+  __module__ = 'ga4gh.schemas.ga4gh.common_pb2'
+  # @@protoc_insertion_point(class_scope:ga4gh.schemas.ga4gh.Metadata)
+  ))
+_sym_db.RegisterMessage(Metadata)
 
 Experiment = _reflection.GeneratedProtocolMessageType('Experiment', (_message.Message,), dict(
   DESCRIPTOR = _EXPERIMENT,

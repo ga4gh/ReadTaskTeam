@@ -21,7 +21,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='ga4gh/schemas/ga4gh/rna_quantification.proto',
   package='ga4gh.schemas.ga4gh',
   syntax='proto3',
-  serialized_pb=_b('\n,ga4gh/schemas/ga4gh/rna_quantification.proto\x12\x13ga4gh.schemas.ga4gh\x1a ga4gh/schemas/ga4gh/common.proto\"y\n\x14RnaQuantificationSet\x12\n\n\x02id\x18\x01 \x01(\t\x12\x12\n\ndataset_id\x18\x02 \x01(\t\x12\x0c\n\x04name\x18\x03 \x01(\t\x12\x33\n\nattributes\x18\x04 \x01(\x0b\x32\x1f.ga4gh.schemas.ga4gh.Attributes\"\x91\x02\n\x11RnaQuantification\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x14\n\x0c\x62iosample_id\x18\x08 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x03 \x01(\t\x12\x16\n\x0eread_group_ids\x18\x04 \x03(\t\x12.\n\x08programs\x18\x05 \x03(\x0b\x32\x1c.ga4gh.schemas.ga4gh.Program\x12\x17\n\x0f\x66\x65\x61ture_set_ids\x18\x06 \x03(\t\x12!\n\x19rna_quantification_set_id\x18\x07 \x01(\t\x12\x33\n\nattributes\x18\t \x01(\x0b\x32\x1f.ga4gh.schemas.ga4gh.Attributes\"\xd0\x02\n\x0f\x45xpressionLevel\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x12\n\nfeature_id\x18\x03 \x01(\t\x12\x1d\n\x15rna_quantification_id\x18\x04 \x01(\t\x12\x16\n\x0eraw_read_count\x18\x05 \x01(\x02\x12\x12\n\nexpression\x18\x06 \x01(\x02\x12\x15\n\ris_normalized\x18\x07 \x01(\x08\x12\x32\n\x05units\x18\x08 \x01(\x0e\x32#.ga4gh.schemas.ga4gh.ExpressionUnit\x12\r\n\x05score\x18\t \x01(\x02\x12\x19\n\x11\x63onf_interval_low\x18\n \x01(\x02\x12\x1a\n\x12\x63onf_interval_high\x18\x0b \x01(\x02\x12\x33\n\nattributes\x18\x0c \x01(\x0b\x32\x1f.ga4gh.schemas.ga4gh.Attributes*D\n\x0e\x45xpressionUnit\x12\x1f\n\x1b\x45XPRESSION_UNIT_UNSPECIFIED\x10\x00\x12\x08\n\x04\x46PKM\x10\x01\x12\x07\n\x03TPM\x10\x02\x62\x06proto3')
+  serialized_pb=_b('\n,ga4gh/schemas/ga4gh/rna_quantification.proto\x12\x13ga4gh.schemas.ga4gh\x1a ga4gh/schemas/ga4gh/common.proto\"\xaa\x01\n\x14RnaQuantificationSet\x12\n\n\x02id\x18\x01 \x01(\t\x12\x12\n\ndataset_id\x18\x02 \x01(\t\x12\x0c\n\x04name\x18\x03 \x01(\t\x12\x33\n\nattributes\x18\x04 \x01(\x0b\x32\x1f.ga4gh.schemas.ga4gh.Attributes\x12/\n\x08metadata\x18\x05 \x01(\x0b\x32\x1d.ga4gh.schemas.ga4gh.Metadata\"\xc2\x02\n\x11RnaQuantification\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x14\n\x0c\x62iosample_id\x18\x08 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x03 \x01(\t\x12\x16\n\x0eread_group_ids\x18\x04 \x03(\t\x12.\n\x08programs\x18\x05 \x03(\x0b\x32\x1c.ga4gh.schemas.ga4gh.Program\x12\x17\n\x0f\x66\x65\x61ture_set_ids\x18\x06 \x03(\t\x12!\n\x19rna_quantification_set_id\x18\x07 \x01(\t\x12\x33\n\nattributes\x18\t \x01(\x0b\x32\x1f.ga4gh.schemas.ga4gh.Attributes\x12/\n\x08metadata\x18\n \x01(\x0b\x32\x1d.ga4gh.schemas.ga4gh.Metadata\"\x81\x03\n\x0f\x45xpressionLevel\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x12\n\nfeature_id\x18\x03 \x01(\t\x12\x1d\n\x15rna_quantification_id\x18\x04 \x01(\t\x12\x16\n\x0eraw_read_count\x18\x05 \x01(\x02\x12\x12\n\nexpression\x18\x06 \x01(\x02\x12\x15\n\ris_normalized\x18\x07 \x01(\x08\x12\x32\n\x05units\x18\x08 \x01(\x0e\x32#.ga4gh.schemas.ga4gh.ExpressionUnit\x12\r\n\x05score\x18\t \x01(\x02\x12\x19\n\x11\x63onf_interval_low\x18\n \x01(\x02\x12\x1a\n\x12\x63onf_interval_high\x18\x0b \x01(\x02\x12\x33\n\nattributes\x18\x0c \x01(\x0b\x32\x1f.ga4gh.schemas.ga4gh.Attributes\x12/\n\x08metadata\x18\r \x01(\x0b\x32\x1d.ga4gh.schemas.ga4gh.Metadata*D\n\x0e\x45xpressionUnit\x12\x1f\n\x1b\x45XPRESSION_UNIT_UNSPECIFIED\x10\x00\x12\x08\n\x04\x46PKM\x10\x01\x12\x07\n\x03TPM\x10\x02\x62\x06proto3')
   ,
   dependencies=[ga4gh_dot_schemas_dot_ga4gh_dot_common__pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
@@ -47,8 +47,8 @@ _EXPRESSIONUNIT = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=841,
-  serialized_end=909,
+  serialized_start=989,
+  serialized_end=1057,
 )
 _sym_db.RegisterEnumDescriptor(_EXPRESSIONUNIT)
 
@@ -94,6 +94,13 @@ _RNAQUANTIFICATIONSET = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='metadata', full_name='ga4gh.schemas.ga4gh.RnaQuantificationSet.metadata', index=4,
+      number=5, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -106,8 +113,8 @@ _RNAQUANTIFICATIONSET = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=103,
-  serialized_end=224,
+  serialized_start=104,
+  serialized_end=274,
 )
 
 
@@ -181,6 +188,13 @@ _RNAQUANTIFICATION = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='metadata', full_name='ga4gh.schemas.ga4gh.RnaQuantification.metadata', index=9,
+      number=10, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -193,8 +207,8 @@ _RNAQUANTIFICATION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=227,
-  serialized_end=500,
+  serialized_start=277,
+  serialized_end=599,
 )
 
 
@@ -289,6 +303,13 @@ _EXPRESSIONLEVEL = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='metadata', full_name='ga4gh.schemas.ga4gh.ExpressionLevel.metadata', index=12,
+      number=13, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -301,15 +322,18 @@ _EXPRESSIONLEVEL = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=503,
-  serialized_end=839,
+  serialized_start=602,
+  serialized_end=987,
 )
 
 _RNAQUANTIFICATIONSET.fields_by_name['attributes'].message_type = ga4gh_dot_schemas_dot_ga4gh_dot_common__pb2._ATTRIBUTES
+_RNAQUANTIFICATIONSET.fields_by_name['metadata'].message_type = ga4gh_dot_schemas_dot_ga4gh_dot_common__pb2._METADATA
 _RNAQUANTIFICATION.fields_by_name['programs'].message_type = ga4gh_dot_schemas_dot_ga4gh_dot_common__pb2._PROGRAM
 _RNAQUANTIFICATION.fields_by_name['attributes'].message_type = ga4gh_dot_schemas_dot_ga4gh_dot_common__pb2._ATTRIBUTES
+_RNAQUANTIFICATION.fields_by_name['metadata'].message_type = ga4gh_dot_schemas_dot_ga4gh_dot_common__pb2._METADATA
 _EXPRESSIONLEVEL.fields_by_name['units'].enum_type = _EXPRESSIONUNIT
 _EXPRESSIONLEVEL.fields_by_name['attributes'].message_type = ga4gh_dot_schemas_dot_ga4gh_dot_common__pb2._ATTRIBUTES
+_EXPRESSIONLEVEL.fields_by_name['metadata'].message_type = ga4gh_dot_schemas_dot_ga4gh_dot_common__pb2._METADATA
 DESCRIPTOR.message_types_by_name['RnaQuantificationSet'] = _RNAQUANTIFICATIONSET
 DESCRIPTOR.message_types_by_name['RnaQuantification'] = _RNAQUANTIFICATION
 DESCRIPTOR.message_types_by_name['ExpressionLevel'] = _EXPRESSIONLEVEL

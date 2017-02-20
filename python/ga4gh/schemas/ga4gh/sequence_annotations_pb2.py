@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='ga4gh/schemas/ga4gh/sequence_annotations.proto',
   package='ga4gh.schemas.ga4gh',
   syntax='proto3',
-  serialized_pb=_b('\n.ga4gh/schemas/ga4gh/sequence_annotations.proto\x12\x13ga4gh.schemas.ga4gh\x1a ga4gh/schemas/ga4gh/common.proto\"\xc5\x02\n\x07\x46\x65\x61ture\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x13\n\x0bgene_symbol\x18\x03 \x01(\t\x12\x11\n\tparent_id\x18\x04 \x01(\t\x12\x11\n\tchild_ids\x18\x05 \x03(\t\x12\x16\n\x0e\x66\x65\x61ture_set_id\x18\x06 \x01(\t\x12\x16\n\x0ereference_name\x18\x07 \x01(\t\x12\r\n\x05start\x18\x08 \x01(\x03\x12\x0b\n\x03\x65nd\x18\t \x01(\x03\x12+\n\x06strand\x18\n \x01(\x0e\x32\x1b.ga4gh.schemas.ga4gh.Strand\x12\x37\n\x0c\x66\x65\x61ture_type\x18\x0b \x01(\x0b\x32!.ga4gh.schemas.ga4gh.OntologyTerm\x12\x33\n\nattributes\x18\x0c \x01(\x0b\x32\x1f.ga4gh.schemas.ga4gh.Attributes\"\x9d\x01\n\nFeatureSet\x12\n\n\x02id\x18\x01 \x01(\t\x12\x12\n\ndataset_id\x18\x02 \x01(\t\x12\x18\n\x10reference_set_id\x18\x03 \x01(\t\x12\x0c\n\x04name\x18\x04 \x01(\t\x12\x12\n\nsource_uri\x18\x05 \x01(\t\x12\x33\n\nattributes\x18\x0c \x01(\x0b\x32\x1f.ga4gh.schemas.ga4gh.Attributesb\x06proto3')
+  serialized_pb=_b('\n.ga4gh/schemas/ga4gh/sequence_annotations.proto\x12\x13ga4gh.schemas.ga4gh\x1a ga4gh/schemas/ga4gh/common.proto\"\xf6\x02\n\x07\x46\x65\x61ture\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x13\n\x0bgene_symbol\x18\x03 \x01(\t\x12\x11\n\tparent_id\x18\x04 \x01(\t\x12\x11\n\tchild_ids\x18\x05 \x03(\t\x12\x16\n\x0e\x66\x65\x61ture_set_id\x18\x06 \x01(\t\x12\x16\n\x0ereference_name\x18\x07 \x01(\t\x12\r\n\x05start\x18\x08 \x01(\x03\x12\x0b\n\x03\x65nd\x18\t \x01(\x03\x12+\n\x06strand\x18\n \x01(\x0e\x32\x1b.ga4gh.schemas.ga4gh.Strand\x12\x37\n\x0c\x66\x65\x61ture_type\x18\x0b \x01(\x0b\x32!.ga4gh.schemas.ga4gh.OntologyTerm\x12\x33\n\nattributes\x18\x0c \x01(\x0b\x32\x1f.ga4gh.schemas.ga4gh.Attributes\x12/\n\x08metadata\x18\r \x01(\x0b\x32\x1d.ga4gh.schemas.ga4gh.Metadata\"\xce\x01\n\nFeatureSet\x12\n\n\x02id\x18\x01 \x01(\t\x12\x12\n\ndataset_id\x18\x02 \x01(\t\x12\x18\n\x10reference_set_id\x18\x03 \x01(\t\x12\x0c\n\x04name\x18\x04 \x01(\t\x12\x12\n\nsource_uri\x18\x05 \x01(\t\x12\x33\n\nattributes\x18\x0c \x01(\x0b\x32\x1f.ga4gh.schemas.ga4gh.Attributes\x12/\n\x08metadata\x18\x07 \x01(\x0b\x32\x1d.ga4gh.schemas.ga4gh.Metadatab\x06proto3')
   ,
   dependencies=[ga4gh_dot_schemas_dot_ga4gh_dot_common__pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
@@ -119,6 +119,13 @@ _FEATURE = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='metadata', full_name='ga4gh.schemas.ga4gh.Feature.metadata', index=12,
+      number=13, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -132,7 +139,7 @@ _FEATURE = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=106,
-  serialized_end=431,
+  serialized_end=480,
 )
 
 
@@ -185,6 +192,13 @@ _FEATURESET = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='metadata', full_name='ga4gh.schemas.ga4gh.FeatureSet.metadata', index=6,
+      number=7, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -197,14 +211,16 @@ _FEATURESET = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=434,
-  serialized_end=591,
+  serialized_start=483,
+  serialized_end=689,
 )
 
 _FEATURE.fields_by_name['strand'].enum_type = ga4gh_dot_schemas_dot_ga4gh_dot_common__pb2._STRAND
 _FEATURE.fields_by_name['feature_type'].message_type = ga4gh_dot_schemas_dot_ga4gh_dot_common__pb2._ONTOLOGYTERM
 _FEATURE.fields_by_name['attributes'].message_type = ga4gh_dot_schemas_dot_ga4gh_dot_common__pb2._ATTRIBUTES
+_FEATURE.fields_by_name['metadata'].message_type = ga4gh_dot_schemas_dot_ga4gh_dot_common__pb2._METADATA
 _FEATURESET.fields_by_name['attributes'].message_type = ga4gh_dot_schemas_dot_ga4gh_dot_common__pb2._ATTRIBUTES
+_FEATURESET.fields_by_name['metadata'].message_type = ga4gh_dot_schemas_dot_ga4gh_dot_common__pb2._METADATA
 DESCRIPTOR.message_types_by_name['Feature'] = _FEATURE
 DESCRIPTOR.message_types_by_name['FeatureSet'] = _FEATURESET
 

@@ -59,6 +59,9 @@ message Reference {
 
   // A map of additional information.
   Attributes attributes = 11;
+
+  // Additional metadata (optional).
+  Metadata metadata = 12;
 }
 
 // A `ReferenceSet` is a set of `Reference` s which typically comprise a
@@ -105,7 +108,10 @@ message ReferenceSet {
   // additional sequences, or some of the sequences within it are derived
   // (see the definition of `isDerived` in `Reference`).
   bool is_derived = 9;
-  
+
   // A map of additional information.
   Attributes attributes = 11;
+
+  // Additional metadata (optional).
+  Metadata metadata = 12;
 }

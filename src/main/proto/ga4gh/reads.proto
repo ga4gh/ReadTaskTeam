@@ -50,14 +50,6 @@ message ReadGroup {
   // The predicted insert size of this read group.
   int32 predicted_insert_size = 8;
 
-  // The time at which this read group was created in milliseconds from the
-  // epoch.
-  int64 created = 9;
-
-  // The time at which this read group was last updated in milliseconds
-  // from the epoch.
-  int64 updated = 10;
-
   // Statistical data on reads in this read group.
   ReadStats stats = 11;
 
@@ -70,6 +62,9 @@ message ReadGroup {
 
   // A map of additional information about the Read Group.
   Attributes attributes = 15;
+
+  // Additional metadata (optional).
+  Metadata metadata = 16;
 }
 
 // A ReadGroupSet is a logical collection of ReadGroups. Typically one
@@ -92,9 +87,12 @@ message ReadGroupSet {
 
   // NB: we require that all readgroups in the set are mapped to the same
   // referenceSet.
-  
+
   // A map of additional information about the Read Group Set.
   Attributes attributes = 6;
+
+  // Additional metadata (optional).
+  Metadata metadata = 7;
 }
 
 // A linear alignment describes the alignment of a read to a Reference, using a
@@ -209,6 +207,9 @@ message ReadAlignment {
 
   // A map of additional information about the Alignment.
   Attributes attributes = 17;
+
+  // Additional metadata (optional).
+  Metadata metadata = 18;
 }
 
 // A single CIGAR operation.

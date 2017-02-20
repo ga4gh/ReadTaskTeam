@@ -75,6 +75,9 @@ message Feature {
   //   * Score - the GFF3 score column
   //   * Phase - the GFF3 phase column for CDS features.
   Attributes attributes = 12;
+
+  // Additional metadata (optional).
+  Metadata metadata = 13;
 }
 
 // A set of sequence features annotations.
@@ -98,4 +101,7 @@ message FeatureSet {
 
   // A map of additional Feature Set information.
   Attributes attributes = 12;
+
+  // Additional metadata (optional).
+  Metadata metadata = 7;
 }

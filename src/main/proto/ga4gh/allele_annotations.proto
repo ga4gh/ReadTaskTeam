@@ -68,8 +68,11 @@ message VariantAnnotationSet {
   // reference data used.
   Analysis analysis = 4;
   
-// A map of additional information about the Annotation Set.
+  // A map of additional information about the Annotation Set.
   Attributes attributes = 5;
+
+  // Additional metadata (optional).
+  Metadata metadata = 6;
 }
 
 // A HGVSAnnotation record holds Human Genome Variation Society descriptions of
@@ -117,9 +120,12 @@ message TranscriptEffect {
 
   // Output from prediction packages such as SIFT.
   repeated AnalysisResult analysis_results = 9;
-  
+
   // A map of additional information about the Transcript Effect.
   Attributes attributes = 11;
+
+  // Additional metadata (optional).
+  Metadata metadata = 12;
 }
 
 // A `VariantAnnotation` record represents the result of comparing a variant to
@@ -134,13 +140,13 @@ message VariantAnnotation {
   // The ID of the variant annotation set this record belongs to.
   string variant_annotation_set_id = 3;
 
-  // The time at which this record was created, in ISO 8601 format.
-  string created = 4;
-
   // The transcript effect annotation for the alleles of this variant. Each
   // one represents the effect of a single allele on a single transcript.
   repeated TranscriptEffect transcript_effects = 5;
 
   // A map of additional information about the Annotation.
   Attributes attributes = 7;
+
+  // Additional metadata (optional).
+  Metadata metadata = 8;
 }

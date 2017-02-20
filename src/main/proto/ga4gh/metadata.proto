@@ -19,5 +19,8 @@ message Dataset {
 
   // A map of additional dataset information.
   Attributes attributes = 5;
+
+  // Additional metadata (optional).
+  Metadata metadata = 6;
 }
 
