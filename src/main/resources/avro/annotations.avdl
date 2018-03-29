@@ -1,0 +1,35 @@
+@namespace("org.ga4gh")
+
+/**
+  This protocol represents generic annotations
+  Annotations are be roughly divided in 3 'catagories':
+
+    * Variant annotations: Typically this include putative effects, such
+      as 'non_synonymous', 'stop_gained', etc.
+
+    * Gene / transcript annotations: Annotaions releated to genes or 
+      transcripts might include Gene-Set, Gene Ontology, Pathway, identifiers 
+      (such as Uniprot IDs), expression by tissue, etc.
+
+    * Gene region annotations: These may include conservation scores, protein 
+      domains, transcription factor binding sites, etc.
+*/
+
+protocol GAAnnotations {
+
+import idl "common.avdl";
+import idl "annotations_core.avdl";
+import idl "annotations_variant.avdl";
+import idl "annotations_gene.avdl";
+import idl "annotations_interval.avdl";
+
+/**
+  GAAnnotations: Generic annotations
+*/
+record GAAnnotations {
+  union { null, GAAnnotationVariantList } variantAnnotations;
+  union { null, array<GAAnnotationGene> } geneAnnotations;
+  union { null, array<GAAnnotationInterval> } intervalAnnotations;
+}
+
+}

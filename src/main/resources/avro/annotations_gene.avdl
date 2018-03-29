@@ -1,0 +1,79 @@
+@namespace("org.ga4gh")
+
+/**
+  This protocol represents gene or transcript annotations
+*/
+
+protocol GAAnnotationsGene {
+
+import idl "common.avdl";
+import idl "annotations_core.avdl";
+
+/**
+  Generic gene annotations
+*/
+record GAAnnotationGene {
+  string geneId;
+
+  /**
+     Scores associated with this gene
+  */
+  array<GAScore> scores;
+
+  /**
+  A map of additional gene information.
+  */
+  map<array<string>> info = {};
+}
+
+/**
+  Generic transcript annotations
+*/
+record GAAnnotationTranscript {
+  string transcriptId;
+
+  /**
+     Scores associated with this transcript
+  */
+  array<GAScore> scores;
+
+  /**
+  A map of additional transcript information.
+  */
+  map<array<string>> info = {};
+}
+
+/**
+  Gene set
+*/
+record GAGeneSet {
+  string geneSetId;
+
+  /**
+     Gene Set name (e.g. 'REGULATION_OF_LIPID_METABOLIC_PROCESS')
+  */
+  string name;
+
+  /** 
+     Gene names (HUGO) with in this gene set
+  */
+  array<string> geneNames;  
+}
+
+/**
+  Gene set collection (e.g. MSigDb)
+*/
+record GAGeneSetCollection {
+
+  /**
+    Gene set collection name, e.g. 'MSigDb_C7' or 'Reactome'
+  */
+  string name;
+
+  /**
+    Gene sets in this collection
+  */
+  array<GAGeneSet> geneSets;
+}
+
+}
