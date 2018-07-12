@@ -92,6 +92,12 @@ message TranscriptEffect {
   //  The ID of the transcript effect record
   string id = 1;
 
+  // The ID of the variant annotation this transcript effect belongs to.
+  string variant_annotation_id = 11;
+
+  // The ID of the variant this transcript effect's annotation belongs to.
+  string variant_id = 12;
+
   // The id of the transcript feature the annotation is relative to.
   // TODO: derive unique id from digest of data [location, allele, transcript?]
   string feature_id = 2;
@@ -136,10 +142,9 @@ message VariantAnnotation {
 
   // The time at which this record was created, in ISO 8601 format.
   string created = 4;
-
-  // The transcript effect annotation for the alleles of this variant. Each
-  // one represents the effect of a single allele on a single transcript.
-  repeated TranscriptEffect transcript_effects = 5;
+  
+  // The allele frequency provided by the annotation.
+  double allele_frequency = 7;
 
   // A map of additional information about the Annotation.
   Attributes attributes = 7;
