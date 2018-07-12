@@ -1,9 +1,5 @@
 .. _biometadata:
 
-.. image:: /_static/biometadata_schema.svg
-   :width: 184 px
-   :align: right
-
 .. _biometadata_biosample:
 
 *******************************
@@ -37,7 +33,7 @@ Attribute             Notes
 *name*                * a human readable object label/identifier
                       * not to be used for referencing
 *description*         * additional, unstructured information about this Biosample
-*disease*             * OntologyTerm annotating the disease of the sample
+*bio_characteristics*     * contains lists of phenotypes, diseases and other information associated with this Biosample, in the form of BioCharacteristic objects
 *individualId*        * the *id* of the *Individual* this Biosample was derived from
 *created*             * the time the record was created, in ISO8601
 *updated*             * the time the record was updated, in ISO8601
@@ -57,6 +53,11 @@ An *Individual* is a GA4GH data object representing a biological instance
 (most commonly a human being or other individual organism) on whose *Biosamples*
 experimental analyses are performed.
 
+In the case of metagenome analyses (i.e. when the biosample consists of
+material like patient derived sputum, analyzed for its microbial content), the
+"species" context would still be the host; identified guest species would
+be described in analysis results.
+
 Individual attributes
 =====================
 
@@ -69,9 +70,25 @@ Attribute             Notes
 *name*                * a human readable object label/identifier
                       * not to be used for referencing
 *description*         * additional, unstructured information about this Individual
+*bio_characteristics*     * contains lists of phenotypes, diseases and other information associated with this Individual, in the form of BioCharacteristic objects
 *species*             * OntologyTerm representing the species (NCBITaxon:9606)
 *sex*                 * OntologyTerm for the genetic sex of this individual.
 *created*             * the time the record was created, in ISO8601
 *updated*             * the time the record was updated, in ISO8601
 *attributes*          * additional, structured information
 ===================== ==========================================================
+
+.. _biometadata_BioCharacteristic:
+
+***************************************
+BioMetadata: *BioCharacteristic* Object
+***************************************
+
+BioCharacteristic in the GA4GH Schema
+-------------------------------------
+
+A BioCharacteristic is an object, defining a single phenotype or diagnosis
+through the use of a free text description and a representation by one or
+more "ontologyTerms" objects as well as zero or more "negatedOntologyTerms".
+An additional "scope" attribute allows to limit queries e.g. to "disease" type
+objects.

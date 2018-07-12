@@ -38,7 +38,7 @@ What is the minimum attribute requirement for  OntologyTerm in GA4GH?
 
 Conceptually (and consistent with the metadata branch)
 
-:termId:
+:term_id:
   required and implemented as CURIE
   we assume this resolves to a meaningful document, e.g. http://purl.obolibrary.org/obo/SO_0000147, using a prefix mapper, e.g. SO: <=> http://purl.obolibrary.org/obo/SO_
 :term:
@@ -80,45 +80,41 @@ Examples
 Genotypic sex
 =============
 
-:termId:
+:term_id:
 	"PATO:0020001",
 :term:
   "male genotypic sex" ,
 
 
-
 Sequence Ontology
 =================
 
-:termId:
+:term_id:
   "SO:0001583",
 :term:
 	"missense_variant",
 
 
-
 Human Phenotype ontology
 ========================
 
-:termId:
+:term_id:
   "HP:0000819",
 :term:
-	"Diabetes mellitus",
-
+  "Diabetes mellitus",
 
 ----
 
-:termId:
-	"HP:0012059",
+:term_id:
+  "HP:0012059",
 :term:
-	"Lentigo maligna melanoma",
-
+  "Lentigo maligna melanoma",
 
 
 Body part (Uberon)
 ==================
 
-:termId:
+:term_id:
 	"UBERON:0003403",
 :term:
 	"skin of forearm",
@@ -127,7 +123,7 @@ Body part (Uberon)
 Human disease ontology
 ======================
 
-:termId:
+:term_id:
 	"DOID:9351",
 :term:
 	"diabetes mellitus",
@@ -136,26 +132,23 @@ Human disease ontology
 Experimental factor ontology
 ============================
 
-:termId:
+:term_id:
 	"EFO:0000400",
 :term:
 	"diabetes mellitus",
 
-
 ----
 
-:termId:
+:term_id:
 	"EFO:0004422",
 :term:
 	"exome",
 
 
-
 Unit Ontology
 =============
 
-:termId:
+:term_id:
 	"UO:0000016",
 :term:
 	"millimetre",
-
